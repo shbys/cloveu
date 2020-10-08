@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+enum corvid
+{
+    magpie,
+    raven,
+    jay,
+    corvid_num,
+};
+
+char const *const birds[corvid_num] = {
+    [magpie] = "magpie",
+    [raven] = "raven",
+    [jay] = "jay",
+};
+
+int main(void)
+{
+    for (unsigned i = 0; i < corvid_num; ++i)
+    {
+        printf("Corvid %u is the %s\n", i, birds[i]);
+    }
+
+    return EXIT_SUCCESS;
+}
