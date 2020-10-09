@@ -1,7 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/*lower and upper iteration limits centered around 1.0 */
+/**
+ * lower and upper iteration limits centered around 1.0 
+*/
 
 static double const eps1m01 = 1.0 - 0x1P-01;
 static double const eps1p01 = 1.0 + 0x1P-01;

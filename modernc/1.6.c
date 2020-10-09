@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*
+/**
  * Array parameters behave as if the array is passed by reference.
  * Don't use the `sizeof` operator on array parameters to functions.
  * A special kind of array, even has literals: strings
  * A string is a 0-terminated array of `char`.
  * Array can't be assigned to.
  * 
- */
+*/
 
 #define ARRAY_SWAP_LENGTH 2
 
@@ -20,11 +20,11 @@ void swap_double(double a[static ARRAY_SWAP_LENGTH])
     a[1] = temp;
 }
 
-/*
+/**
  * Below are all equivalent declarations.
  * They are arrays of `char`.
  * They are strings.
- */
+*/
 
 char const jay0[] = "jay";
 char const jay1[] = {"jay"};
@@ -40,15 +40,15 @@ char const jay3[4] = {
     'y',
 };
 
-/*
+/**
  * Below are not strings.
  * They are arrays of `char` but not 0-terminated.
- */
+*/
 
 char const jay4[3] = {'j', 'a', 'y'};
 char const jay5[3] = "jay";
 
-/*
+/**
  *          [0]             [1]             [2]             [3]
  *  jay0    char 'j'        char 'a'        char 'y'        char '\0'
  *  jay1    char 'j'        char 'a'        char 'y'        char '\0'
@@ -56,7 +56,7 @@ char const jay5[3] = "jay";
  *  jay3    char 'j'        char 'a'        char 'y'        char '\0'
  *  jay4    char 'j'        char 'a'        char 'y'        
  *  jay5    char 'j'        char 'a'        char 'y'        
- */
+*/
 
 int main(void)
 {

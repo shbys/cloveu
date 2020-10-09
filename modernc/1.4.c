@@ -9,14 +9,14 @@ enum corvid
     corvid_num,
 };
 
-/*
-    string literal
-
-            [magpie]            [raven]             [jay]
-    birds   char const *const   char const *const   char const *const
-            ↓                   ↓                   ↓
-            "magpie"            "raven"             "jay"
- */
+/**
+ *   string literal
+ *
+ *           [magpie]            [raven]             [jay]
+ *   birds   char const *const   char const *const   char const *const
+ *           ↓                   ↓                   ↓
+ *           "magpie"            "raven"             "jay"
+*/
 
 char const *const birds[corvid_num] = {
     [magpie] = "magpie",

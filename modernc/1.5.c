@@ -9,7 +9,7 @@ enum corvid
     corvid_num,
 };
 
-/*
+/**
  *   Compound literals: (T){ INIT }
  *   T is a type, in parentheses, followed by an initializer
  * 
@@ -20,7 +20,7 @@ enum corvid
  *      A backspace character "\"" at the very end of the line can be used to continue the macro definition to the next line.
  *      There must be no ";" at the end of the macro definition.
  *      Remember, it is all just text replacement.
- */
+*/
 
 #define CORVID_NAME /**/            \
     (char const *const[corvid_num]) \
