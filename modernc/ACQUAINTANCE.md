@@ -53,7 +53,7 @@ $ gcc-10 -g -std=c18 -Wall -lm -o 1.1 1.1.c
 | Name          | [min,max]                     | Where          | Typical                                          |
 |---------------|-------------------------------|----------------|--------------------------------------------------|
 | size_t        | [0,SIZE_MAX]                  | <stdint.h>     | [0 - 2<sup>w</sup> − 1], w = 32, 64              |
-| double        | [±DBL_MIN, ±DBL_MAX ]         | <float.h>      | [±2 −<sup>w</sup>−2 , ±2<sup>w</sup> ], w = 1024 |
+| double        | [±DBL_MIN, ±DBL_MAX ]         | <float.h>      | [±2<sup>-w-2</sup> , ±2<sup>w</sup> ], w = 1024  |
 | signed        | [INT_MIN, INT_MAX]            | <limits.h>     | [−2<sup>w</sup> , 2<sup>w</sup> − 1], w = 31     |
 | unsigned      | [0, UINT_MAX]                 | <limits.h>     | [0, 2<sup>w</sup> − 1], w = 32                   |
 | bool          | [false, true ]                | <stdbool.h>    | [0, 1]                                           |
