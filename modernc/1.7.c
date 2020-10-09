@@ -15,7 +15,7 @@
 char const *const p2nothing = 0;
 
 /**
- * This pointer is indeterminate
+ * This pointer is indeterminate.
  * Because it is uninitialize, its state is indeterminate.
  * Any use of it would do you harm
  * and leave your program in an undefined state.
