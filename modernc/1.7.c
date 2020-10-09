@@ -12,7 +12,7 @@
 */
 
 // null pointer
-char const *const p2nothing = 0;
+char const *const p2nothing = NULL;
 
 /**
  * This pointer is indeterminate.

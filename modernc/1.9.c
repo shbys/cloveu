@@ -77,4 +77,6 @@ int main(void)
                 },
         };
     printf("p.name = %s \n", p.name);
+
+    return EXIT_SUCCESS;
 }
