@@ -76,7 +76,6 @@ typedef struct MyDateTimeStruct
     int hour;
     int minute;
     int second;
-    int days_before;
 } MyDateTimeStruct;
 
 /**
