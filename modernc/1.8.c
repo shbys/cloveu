@@ -56,6 +56,14 @@ MyDateTime const mdt = {
     56,
 };
 
+#define DAYS_BEFORE                                  \
+    (int const[12])                                  \
+    {                                                \
+        [0] = 0, [1] = 31, [2] = 59, [3] = 90,       \
+        [4] = 120, [5] = 151, [6] = 181, [7] = 212,  \
+        [8] = 243, [9] = 273, [10] = 303, [11] = 334 \
+    }
+
 /**
  * Type MyDateTimeStruct to represent a calendar time:
  * year, month, day, hour, minute, second
@@ -68,6 +76,7 @@ typedef struct MyDateTimeStruct
     int hour;
     int minute;
     int second;
+    int days_before;
 } MyDateTimeStruct;
 
 /**
@@ -95,8 +104,10 @@ int main(void)
 
     printf("MyDateTime value =\t\t\t%d-%d-%d %d:%d:%d\n",
            mdt[0], mdt[1], mdt[2], mdt[3], mdt[4], mdt[5]);
-    printf("MyDateTimeStruct value =\t\t%d-%d-%d %d:%d:%d\n",
-           mdts.year, mdts.month, mdts.day, mdts.hour, mdts.minute, mdts.second);
+    printf("MyDateTimeStruct value =\t\t%d-%d-%d %d:%d:%d\ndays_before =\t\t\t\t%d\n",
+           mdts.year, mdts.month, mdts.day,
+           mdts.hour, mdts.minute, mdts.second,
+           DAYS_BEFORE[mdts.month]);
 
     return EXIT_SUCCESS;
 }
