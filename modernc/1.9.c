@@ -11,7 +11,7 @@
  * 
 */
 
-typedef struct Todays
+typedef struct TodayStruct
 {
     int year;
     int mon;
