@@ -12,7 +12,7 @@ FILE *open_file(char const *filename, char const *mode)
     if (!file)
     {
         perror("open file failed.");
-        return NULL;
+        exit(EXIT_FAILURE);
     }
 
     return file;
@@ -22,11 +22,7 @@ FILE *open_file(char const *filename, char const *mode)
 
 void write_file(char const *filename, char *const line)
 {
-    FILE *file = NULL;
-    if ((file = open_file(filename, "a")) == NULL)
-    {
-        return;
-    }
+    FILE *file = open_file(filename, "a");
 
     fputs("feeling fine today\n", file);
     fclose(file);
@@ -40,11 +36,7 @@ typedef struct FileModel
 
 FileModel read_file(char const *filename)
 {
-    FILE *file = NULL;
-    if ((file = open_file(filename, "r")) == NULL)
-    {
-        exit(EXIT_FAILURE);
-    }
+    FILE *file = file = open_file(filename, "r");
 
     fseek(file, 0, SEEK_END);
 
@@ -77,7 +69,7 @@ int main(void)
     char *const file_name = "modernc/assets/mylog.txt";
     write_file(file_name, "feeling fine today\n");
     FileModel fm = read_file(file_name);
-    printf("file content :\n %s\nrows=%zu\n", fm.contents, fm.rows);
+    printf("file content :\n%s\nrows=%zu\n", fm.contents, fm.rows);
 
     return EXIT_SUCCESS;
 }
